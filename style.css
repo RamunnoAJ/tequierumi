@@ -4,6 +4,12 @@
     box-sizing: border-box;
 }
 
+root{
+    --color1: var(--color1);
+    --color2: var(--color2);
+    --color3: var(--color3);
+}
+
 body{
     font-family: 'Poppins', sans-serif;
 }
@@ -11,7 +17,7 @@ body{
 .header{
     min-height: 65vh;
     width: 100%;
-    background: #FFE9D0;
+    background: var(--color1);
 }
 
 .container{
@@ -22,7 +28,7 @@ body{
     display: flex;
     align-items: center;
     padding: 1.5em;
-    background: #FFE9D0;
+    background: var(--color1);
 }
 
 
@@ -39,7 +45,7 @@ i:hover{
 }
 
 .fa-solid{
-    color: #C3753D;
+    color: var(--color3);
     font-size: 1.5rem;
 }
 
@@ -71,12 +77,12 @@ nav ul{
 nav ul li{
     display: inline-block;
     margin-right: 1.5em;
-    color: #C3753D;
+    color: var(--color3);
 }
 
 a{
     text-decoration: none;
-    color: #C3753D;
+    color: var(--color3);
 }
 
 p{
@@ -99,7 +105,7 @@ p{
     font-size: 100rem;
     margin: auto;
     font-family: 'Permanent Marker', cursive;
-    color: #C3753D;
+    color: var(--color3);
 }
 
 .col-2 img{
@@ -116,7 +122,7 @@ p{
 
 .btn{
     display: inline-block;
-    background: #C3753D;
+    background: var(--color3);
     color: white;
     padding: .5em 2em;
     margin: 2em 0;
@@ -125,7 +131,7 @@ p{
 }
 
 .btn:hover{
-    background: #FFE9D0;
+    background: var(--color1);
     color: black;
 }
 
@@ -160,7 +166,7 @@ p{
 
 .title::after{
     content: '';
-    background: #C3753D;
+    background: var(--color3);
     width: 80px;
     height: 5px;
     border-radius: 5px;
@@ -177,7 +183,7 @@ p{
 /* FOOTER */
 
 .footer{
-    background: #FFE9D0;
+    background: var(--color1);
     color: #2c2c2c;
     font-size: 1.2rem;
     padding-top: 2em;
@@ -192,7 +198,7 @@ p{
 }
 
 .footer h3{
-    color: #C3753D;
+    color: var(--color3);
     margin-bottom: .3em;
 }
 
@@ -207,7 +213,7 @@ ul{
 
 .footer hr{
     border: none;
-    background: #FFAA6F;
+    background: var(--color2);
     height: 1px;
     margin: 1.5em 1.5em;
 }
@@ -219,7 +225,7 @@ ul{
 }
 
 .icons .fa-brands{
-    color: #C3753D;
+    color: var(--color3);
     margin: 0 1em;
     cursor: pointer;
     padding: 1.2em 0;
