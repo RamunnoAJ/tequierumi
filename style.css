@@ -12,6 +12,7 @@
 
 body{
     font-family: 'Poppins', sans-serif;
+    margin: 0;
 }
 
 .header{
@@ -27,13 +28,38 @@ body{
 .navbar{
     display: flex;
     align-items: center;
-    padding: 1.5em;
-    background: var(--white);
 }
 
+.nav{
+    flex-grow: 1;
+}
 
-i{
-    margin: 0 .5em;
+.navList{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    font-weight: bold;
+    gap: 1.4em;
+    margin-left: 1em;
+    font-size: 1.4rem;
+}
+
+.navList li:nth-of-type(1){
+    margin-left: auto;
+}
+
+.navList li:nth-of-type(5){
+    margin-left: auto;
+}
+
+.navList a{
+    color: var(--orange);
+}
+
+.navList a:hover,
+.navList a:focus{
+    color: var(--cream);
 }
 
 i:hover{
@@ -50,7 +76,7 @@ i:hover{
 }
 
 .logo{
-    text-align: center;
+    text-align: left;
 }
 
 .title{
@@ -59,31 +85,13 @@ i:hover{
 
 .logo img{
     width: 7rem;
-    text-align: center;
-}
-
-nav{
-    flex: 1;
-    text-align: center;
-    margin-right: 3em;
-}
-
-nav ul{
-    display: inline-block;
-    list-style-type: none;
-    font-weight: bold;
-}
-
-nav ul li{
-    display: inline-block;
-    margin-right: 1.5em;
-    color: var(--orange);
+    text-align: left;
 }
 
 a{
     text-decoration: none;
     color: var(--orange);
-}
+}  
 
 p{
     color: #555;
@@ -123,7 +131,7 @@ p{
 .btn{
     display: inline-block;
     background: var(--orange);
-    color: white;
+    color: #2c2c2c;
     padding: .5em 2em;
     margin: 2em 0;
     border-radius: 3em;
@@ -131,8 +139,7 @@ p{
 }
 
 .btn:hover{
-    background: var(--white);
-    color: black;
+    background: #c3753d69;
 }
 
 .small-container{
@@ -176,7 +183,37 @@ p{
     transform: translateX(-50%);
 }
 
+/* PRODUCTS PAGE */
 
+.col-4{
+    flex-basis: 25%;
+    padding: .5em;
+    margin: auto;
+}
+
+figure{
+    overflow: hidden;
+    border-radius: 5px;
+}
+
+.col-4 img{
+    width: 100%;
+    transform: scale(1);
+    transition: .5s ease-in-out;
+}
+
+.col-4 img:hover{
+    transform: scale(1.15);
+}
+
+.col-4 h4{
+    color: #555;
+    font-weight: normal;
+}
+
+.col-4 p{
+    font-size: .75rem;
+}
 
 
 
@@ -226,7 +263,8 @@ ul{
 
 .icons .fa-brands{
     color: var(--orange);
-    margin: 0 1em;
+    margin: 0 .75em;
     cursor: pointer;
-    padding: 1.2em 0;
+    padding-block: 1em;
+    font-size: 2rem;
 }
