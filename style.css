@@ -1,13 +1,13 @@
+root{
+    --color1: #FFE9D0;
+    --color2: #FFAA6F;
+    --color3: #C3753D;
+}
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-root{
-    --color1: var(--color1);
-    --color2: var(--color2);
-    --color3: var(--color3);
 }
 
 body{
