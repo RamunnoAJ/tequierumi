@@ -1,12 +1,32 @@
-    let menuItems = HTML.getElementById("menuItems");
-menuItems.style.maxHeight = "0px";
+$('.menu-toggle').click(function() {
+  
+    $('.nav').toggleClass('site-nav--open', 500);
+    $(this).toggleClass('open');
+    
+})
+  
 
-function menutoggle() {
-    if (menuItems.style.maxHeight == "0px")
-    {
-    menuItems.style.maxHeight = "200px"
-    }
-    else {
-        menuItems.style.maxHeight = "0px"
-    }
-}
+// =========================================
+// =========================================
+// CAROUSEL
+// =========================================
+// =========================================
+
+const buttons = document.querySelectorAll("[data-carousel-button]")
+
+buttons.forEach(button => {
+  button.addEventListener("click", () => {
+    const offset = button.dataset.carouselButton === "next" ? 1 : -1
+    const slides = button
+      .closest("[data-carousel]")
+      .querySelector("[data-slides]")
+
+    const activeSlide = slides.querySelector("[data-active]")
+    let newIndex = [...slides.children].indexOf(activeSlide) + offset
+    if (newIndex < 0) newIndex = slides.children.length - 1
+    if (newIndex >= slides.children.length) newIndex = 0
+
+    slides.children[newIndex].dataset.active = true
+    delete activeSlide.dataset.active
+  })
+})

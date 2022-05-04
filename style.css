@@ -1,7 +1,17 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand:400,700');
+
 :root{
     --white: #FFE9D0;
     --cream: #FFAA6F;
     --orange: #C3753D;
+
+    --fs-xl: clamp(3.5rem, 12vw + 1rem, 7rem);
+    --fs-700: 2;
+    --fs-600: 1.5rem;
+    --fs-400: .8rem;
+
+    font-size: 16px;
+    font-family: 'Quicksand', sans-serif;
 }
 
 *{
@@ -11,18 +21,34 @@
 }
 
 body{
-    font-family: 'Poppins', sans-serif;
     margin: 0;
+    width: 100%;
 }
+
+/* ======================================
+=========================================
+    HEADER
+=========================================
+========================================= */
 
 .header{
-    min-height: 65vh;
-    width: 100%;
     background: var(--white);
+    padding-block: 1em;
+    position: relative;
 }
 
-.container{
-    margin: 0 20rem;
+.logo{
+    text-align: left;
+}
+
+.logo img{
+    width: 5rem;
+}
+
+.header::after{
+    content: '';
+    clear: both;
+    display: block;
 }
 
 .navbar{
@@ -30,62 +56,123 @@ body{
     align-items: center;
 }
 
+.container{
+    width: 95%;
+    max-width: 1000px;
+    margin: auto;
+}
+
 .nav{
-    flex-grow: 1;
+    position: absolute;
+    top: 100%;
+    right: 0%;
+    background: var(--white);
+    clip-path: circle(0px at top right);
+    transition: clip-path ease-in-out 700ms;
+    height: 100vh;
+    z-index: 100;
 }
 
 .navList{
     margin: 0;
     padding: 0;
     list-style: none;
-    display: flex;
     font-weight: bold;
-    gap: 1.4em;
-    margin-left: 1em;
-    font-size: 1.4rem;
+    font-size: var(--fs-400);
 }
 
-.navList li:nth-of-type(1){
-    margin-left: auto;
+.navList li{
+    border-bottom: 1px solid var(--cream);
 }
 
-.navList li:nth-of-type(5){
-    margin-left: auto;
+.navList li:last-child{
+    border-bottom: none;
 }
 
-.navList a{
+.nav a{
+    color: var(--orange);
+    display: block;
+    padding-block: 1.4em;
+    padding-inline: 1.4em;
+    text-transform: uppercase;
+    text-decoration: none;
+    text-align: right;
+}
+
+.nav a:hover,
+.nav a:focus{
+    background: #FFAA6F;
+}
+
+.site-nav--icon{
+    display: inline-block;
+    font-size: var(--fs-600);
+    width: 1.1em;
+    text-align: right;
     color: var(--orange);
 }
 
-.navList a:hover,
-.navList a:focus{
-    color: var(--cream);
-}
-
-i:hover{
+.menu-toggle{
+    padding: 1em;
+    position: absolute;
+    right: .5em;
     cursor: pointer;
 }
 
-.menu-icon{
-    display: none;
+.hamburguer,
+.hamburguer::before,
+.hamburguer::after{
+    content: '';
+    display: block;
+    background: var(--orange);
+    height: 3px;
+    width: 1.75em;
+    border-radius: 3px;
+    transition: all ease-in-out 500ms;
 }
 
-.fa-solid{
-    color: var(--orange);
-    font-size: 1.5rem;
+.hamburguer::before{
+    transform: translateY(-6px);
 }
 
-.logo{
-    text-align: left;
+.hamburguer::after{
+    transform: translateY(3px);
 }
 
-.title{
+
+/* ======================================
+=========================================
+    TITLE
+=========================================
+========================================= */
+
+h1{
+    width: 100%;
+    margin: auto;
     text-align: center;
+    font-family: 'Permanent Marker', cursive;
+    color: var(--orange);
+    margin: .2em 0;
+    font-size: var(--fs-xl);
 }
 
-.logo img{
-    width: 7rem;
-    text-align: left;
+.row-grid{
+    display: grid;
+    gap: 1.5rem;
+    justify-content: center;
+    padding-inline: 1em;
+    text-align: center;
+    align-items: center;
+}
+
+.box-2{
+    height: 40vh;
+}
+
+p{
+    color: #555;
+    font-size: var(--fs-400);
+    text-align: center;
 }
 
 a{
@@ -93,44 +180,10 @@ a{
     color: var(--orange);
 }  
 
-p{
-    color: #555;
-}
-
-.row{
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
-
-.col-2{
-    flex-basis: 50%;
-    min-width: 30rem;
-}
-
-.col-2 h1{
-    font-size: 100rem;
-    margin: auto;
-    font-family: 'Permanent Marker', cursive;
-    color: var(--orange);
-}
-
-.col-2 img{
-    display: block;
-    max-width: 80%;
-    padding: 5em 0;
-}
-
-.col-2 h1{
-    font-size: 4rem;
-    line-height: 5rem;
-    margin: 1em 0;
-}
-
 .btn{
     display: inline-block;
     background: var(--orange);
+    font-size: var(--fs-400);
     color: #2c2c2c;
     padding: .5em 2em;
     margin: 2em 0;
@@ -142,87 +195,88 @@ p{
     background: #c3753d69;
 }
 
-.small-container{
-    max-width: 1000px;
-    margin: auto;
-    padding-left: 1.2em;
-    padding-right: 1.2em;
-}
-.small-container .title{
-    margin-top: 10em;
-}
+/* ======================================
+=========================================
+    CAROUSEL STYLES
+=========================================
+========================================= */
 
-.col-3{
-    flex-basis: 30%;
-    min-width: 12rem;
-    margin-bottom: 2em;
-}
-
-.col-3 img{
-    width: 100%;
-    border-radius: 5px;
-}
-
-.title{
-    text-align: center;
-    margin: 0 auto 2em;
+.carousel{
+    width: inherit;
     position: relative;
-    line-height: 2.5em;
-    color: #555;
 }
 
-.title::after{
-    content: '';
-    background: var(--orange);
-    width: 80px;
-    height: 5px;
-    border-radius: 5px;
+.carousel > ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.slide{
     position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
+    inset: 0;
+    opacity: 0;
+    transition: 200ms opacity ease-in-out;
+    transition-delay: 200ms;
 }
 
-/* PRODUCTS PAGE */
-
-.col-4{
-    flex-basis: 25%;
-    padding: .5em;
-    margin: auto;
-}
-
-figure{
-    overflow: hidden;
-    border-radius: 5px;
-}
-
-.col-4 img{
+.slide > img{
+    display: block;
     width: 100%;
-    transform: scale(1);
-    transition: .5s ease-in-out;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
 }
 
-.col-4 img:hover{
-    transform: scale(1.15);
+.slide[data-active]{
+    opacity: 1;
+    z-index: 1;
+    transition-delay: 0ms;
 }
 
-.col-4 h4{
-    color: #555;
-    font-weight: normal;
+.carousel-button{
+    position: absolute;
+    z-index: 2;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: rgba(255, 255, 255, .5);
+    cursor: pointer;
+    border-radius: .25rem;
+    padding: 0 .5rem;
+    background-color: rgba(0, 0, 0, .1);
 }
 
-.col-4 p{
-    font-size: .75rem;
+.carousel-button:hover,
+.carousel-button:focus {
+  color: white;
+  background-color: rgba(0, 0, 0, .2);
 }
 
+.carousel-button:focus {
+    outline: 1px solid black;
+}
+  
+.carousel-button.prev {
+    left: .5rem;
+}
+  
+.carousel-button.next {
+    right: .5rem;
+}
 
-
-/* FOOTER */
+/* ======================================
+=========================================
+    FOOTER
+=========================================
+========================================= */
 
 .footer{
     background: var(--white);
     color: #2c2c2c;
-    font-size: 1.2rem;
+    font-size: var(--fs-600);
     padding-top: 2em;
     padding-bottom: 2em;
     width: 100%;
@@ -244,6 +298,10 @@ figure{
     margin-bottom: 1em;
 }
 
+.footer .logo{
+    text-align: center;
+}
+
 ul{
     list-style-type: none;
 }
@@ -251,12 +309,12 @@ ul{
 .footer hr{
     border: none;
     background: var(--cream);
-    height: 1px;
+    height: 1.5px;
     margin: 1.5em 1.5em;
 }
 
 .copyright{
-    font-size: .75rem;
+    font-size: .8rem;
     text-align: right;
     margin-right: 5em;
 }
@@ -266,5 +324,84 @@ ul{
     margin: 0 .75em;
     cursor: pointer;
     padding-block: 1em;
-    font-size: 2rem;
+    font-size: var(--fs-700);
+}
+
+
+/* ======================================
+=========================================
+    MEDIA QUERYS
+=========================================
+========================================= */
+
+@media (min-width: 40em){
+
+    :root{
+        --fs-700: 2.25;
+        --fs-600: 1.75rem;
+        --fs-400: 1.25rem;
+    }
+
+    .header{
+        padding-block: 2em;
+    }
+
+    .menu-toggle{
+        display: none;
+    }
+
+    .nav{
+        height: auto;
+        position: relative;
+        background: transparent;
+        float: right;
+        clip-path: initial;
+    }
+
+    .navList li{
+        display: inline-block;
+        border: none;
+        font-size: 1.1rem;
+        padding-block: .5em;
+    }
+
+    .nav a{
+        padding: 0;
+        margin-left: 3em;
+    }
+
+    .nav a:hover,
+    .nav a:focus{
+        background: transparent;
+    }
+
+    .site-nav--icon{
+        display: none;
+    }
+
+    .row-grid{
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 1500px;
+        margin: auto;
+    }
+
+    .box-2{
+        min-height: 60vh;
+    }
+
+    .carousel-button{
+        font-size: 4rem;
+    }
+
+    .carousel-button.prev {
+        left: 1rem;
+    }
+      
+    .carousel-button.next {
+        right: 1rem;
+    }
+
+    p{
+        text-align: left;
+    }
 }

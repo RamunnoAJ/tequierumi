@@ -13,7 +13,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
     <link href="images/logo.png" rel="shortcut icon" type="x-icon">
-    <script src="script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 </head>
 <body>
     <div class="header">
@@ -25,33 +25,52 @@
                 <nav class="nav">
                     <ul id="menuItems" class="navList">
                         <li><a href="index.html">Inicio</a></li>
-                        <li><a href="tienda.html">Tienda</a></li>
+                        <li><a href="#">Tienda</a></li>
                         <li><a href="contacto.html">Contacto</a></li>
                         <li><a href="about-us.html">Quienes Somos</a></li>
-                        <li><a href=""><i class="fa-solid fa-magnifying-glass"></i></a></li>
-                        <li><a href=""><i class="fa-solid fa-circle-user"></i></a></li>
-                        <li><a href=""><i class="fa-solid fa-cart-shopping"></i></a></li>
-                        <li><a href="" onclick="menutoggle()" class="menu-icon"><i class="fa-solid fa-bars"></i></a></li>
+                        <li><a href=""><i class="fa-solid fa-magnifying-glass site-nav--icon"></i></a></li>
+                        <li><a href=""><i class="fa-solid fa-circle-user site-nav--icon"></i></a></li>
+                        <li><a href=""><i class="fa-solid fa-cart-shopping site-nav--icon"></i></a></li>
                     </ul>
                 </nav>
-            </div>
-        
-            <div class="row">
-                <div class="col-2">
-                    <h1>Tequierumi</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam adipisci quaerat unde consequuntur tempora, minima<br>natus inventore reprehenderit quis vel suscipit minus.</p>
-                    <a href="" class="btn">Explore nuestra tienda</a>
-                </div>
-                <div class="col-2">
-                    <img src="" alt="">
+                <div class="menu-toggle">
+                    <div class="hamburguer"></div>
                 </div>
             </div>
+        </div> 
+     </div>
+
+<!--  ===================================
+=========================================
+    TITULO
+=========================================
+========================================= -->
+
+    <h1>Tequierumi</h1>
+    <div class="row-grid">
+        <div class="box-1">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam adipisci quaerat unde consequuntur tempora, minima<br>natus inventore reprehenderit quis vel suscipit minus.</p>
+            <a href="" class="btn">Tienda</a>
+        </div>
+        <div class="box-2 carousel" data-carousel>
+            <button class="carousel-button next" data-carousel-button>&#8658;</button>
+            <button class="carousel-button prev" data-carousel-button>&#8656;</button>
+            <ul data-slides>
+                <li class="slide" data-active><img src="images/tienda/product1.jpg" alt=""></li>
+                <li class="slide"><img src="images/tienda/product2.jpg" alt=""></li>
+                <li class="slide"><img src="images/tienda/product3.jpg" alt=""></li>
+                <li class="slide"><img src="images/tienda/product4.jpg" alt=""></li>
+            </ul>
         </div>
     </div>
 
-<!-- FEATURED PRODUCTS -->
+<!--  ===================================
+=========================================
+    PRODUCTOS DESTACADOS
+=========================================
+========================================= -->
 
-<div class="small-container">
+<!-- <div class="small-container">
     <h2 class="title">Productos Destacados</h2>
     <div class="row">
         <div class="col-3">
@@ -64,14 +83,21 @@
             <a href=""><img src="images/sheep1.jpg" alt=""></a>
         </div>
     </div>
-</div>
+</div> -->
 
-    <!-- FOOTER -->
+<!--  ===================================
+=========================================
+    FOOTER
+=========================================
+========================================= -->
+
     <div class="footer">
         <div class="container">
             <div class="row">
                 <div class="footer-col-3">
-                    <img src="images/logo.png" alt="">
+                    <div class="logo">
+                        <img src="images/logo.png" alt="">
+                    </div>
                     <h3>Encuéntranos en:</h3>
                     <div class="icons">
                         <a href="" target="_blank"><i class="fa-brands fa-facebook"></i></a>
@@ -84,22 +110,6 @@
         </div>
     </div>
 
-
-<!-- JS FOR TOGGLE MENU -->
-    <!-- <script>
-        let menuItems = document.getElementById("menuItems");
-
-    menuItems.style.maxHeight = "0px";
-
-    function menutoggle() {
-        if (menuItems.style.maxHeight == "0px")
-        {
-        menuItems.style.maxHeight = "200px"
-        }
-        else {
-            menuItems.style.maxHeight = "0px"
-        }
-    }
-    </script> -->
+    <script src="script.js"></script>
 </body>
 </html>
