@@ -54,6 +54,7 @@ body{
 .navbar{
     display: flex;
     align-items: center;
+    justify-content: space-between;
 }
 
 .container{
@@ -111,6 +112,11 @@ body{
     text-align: right;
     color: var(--orange);
 }
+
+.site-nav--open {
+    clip-path: circle(250% at top right);
+  /*   display: block; */
+  }
 
 .menu-toggle{
     padding: 1em;
@@ -276,7 +282,7 @@ a{
 .footer{
     background: var(--white);
     color: #2c2c2c;
-    font-size: var(--fs-600);
+    /* font-size: var(--fs-600); */
     padding-top: 2em;
     padding-bottom: 2em;
     width: 100%;
@@ -316,7 +322,7 @@ ul{
 .copyright{
     font-size: .8rem;
     text-align: right;
-    margin-right: 5em;
+    /* margin-right: 5em; */
 }
 
 .icons .fa-brands{
@@ -324,7 +330,7 @@ ul{
     margin: 0 .75em;
     cursor: pointer;
     padding-block: 1em;
-    font-size: var(--fs-700);
+    font-size: var(--fs-600);
 }
 
 
@@ -403,5 +409,9 @@ ul{
 
     p{
         text-align: left;
+    }
+
+    .copyright{
+        margin-right: 5em;
     }
 }
