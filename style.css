@@ -74,6 +74,12 @@ body{
     z-index: 100;
 }
 
+
+.site-nav--open {
+    clip-path: circle(250% at top right);
+  /*   display: block; */
+}
+
 .navList{
     margin: 0;
     padding: 0;
@@ -112,11 +118,6 @@ body{
     text-align: right;
     color: var(--orange);
 }
-
-.site-nav--open {
-    clip-path: circle(250% at top right);
-  /*   display: block; */
-  }
 
 .menu-toggle{
     padding: 1em;
