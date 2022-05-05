@@ -1,20 +1,26 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tequierumi</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous"/>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
-    <link href="images/logo.png" rel="shortcut icon" type="x-icon">
-    <script src="script.js"></script>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Tequierumi</title>
+    
+        
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous"/>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+        <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+        <link href="images/logo.png" rel="shortcut icon" type="x-icon">
+    
+    
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    </head>
 <body>
     <div class="header">
         <div class="container">
@@ -28,82 +34,91 @@
                         <li><a href="tienda.html">Tienda</a></li>
                         <li><a href="contacto.html">Contacto</a></li>
                         <li><a href="about-us.html">Quienes Somos</a></li>
-                        <li><a href=""><i class="fa-solid fa-magnifying-glass"></i></a></li>
-                        <li><a href=""><i class="fa-solid fa-circle-user"></i></a></li>
-                        <li><a href=""><i class="fa-solid fa-cart-shopping"></i></a></li>
-                        <li><a href="" onclick="menutoggle()" class="menu-icon"><i class="fa-solid fa-bars"></i></a></li>
+                        <!-- <li><a href=""><i class="fa-solid fa-magnifying-glass site-nav--icon"></i></a></li>
+                        <li><a href=""><i class="fa-solid fa-circle-user site-nav--icon"></i></a></li>
+                        <li><a href=""><i class="fa-solid fa-cart-shopping site-nav--icon"></i></a></li> -->
                     </ul>
                 </nav>
+                <div class="menu-toggle">
+                    <div class="hamburguer"></div>
+                </div>
             </div>
-        </div>
+        </div> 
     </div>
 
+
+<!--  ===================================
+=========================================
+    PRODUCTOS
+=========================================
+========================================= -->
+    <h1>Tienda</h1>
     <div class="small-container">
-        <div class="row">
-            <div class="col-4">
-                <figure>
-                    <img src="images/tienda/product1.jpg" alt="">
-                </figure>
-                <h4>Sonajero de 4 caras</h4>
-                <p></p>
+        <div class="shop-content">
+            <div class="product-box">
+                <img src="images/tienda/product1.jpg" alt="" class="product-img">
+                <h2 class="product-title">PRODUCTO</h2>
+                <span class="price">$500</span>
+                <i class='bx bx-shopping-bag add-cart'></i>
             </div>
-            <div class="col-4">
-                <figure>
-                    <img src="images/tienda/product2.jpg" alt="">
-                </figure>
-                <h4>Pareja de patos</h4>
-                <p></p>
+            <div class="product-box">
+                <img src="images/tienda/product1.jpg" alt="" class="product-img">
+                <h2 class="product-title">PRODUCTO</h2>
+                <span class="price">$500</span>
+                <i class='bx bx-shopping-bag add-cart'></i>
             </div>
-            <div class="col-4">
-                <figure>
-                    <img src="images/tienda/product3.jpg" alt="">
-                </figure>
-                <h4>Osa Princesa</h4>
-                <p></p>
+            <div class="product-box">
+                <img src="images/tienda/product1.jpg" alt="" class="product-img">
+                <h2 class="product-title">PRODUCTO</h2>
+                <span class="price">$500</span>
+                <i class='bx bx-shopping-bag add-cart'></i>
             </div>
-            <div class="col-4">
-                <figure>
-                    <img src="images/tienda/product4.jpg" alt="">
-                </figure>
-                <h4>Elefantito</h4>
-                <p></p>
+            <div class="product-box">
+                <img src="images/tienda/product1.jpg" alt="" class="product-img">
+                <h2 class="product-title">PRODUCTO</h2>
+                <span class="price">$500</span>
+                <i class='bx bx-shopping-bag add-cart'></i>
             </div>
         </div>
-        <div class="row">
-            <div class="col-4">
-                <figure>
-                    <img src="images/tienda/product5.jpg" alt="">
-                </figure>
-                <h4>Vaquitas</h4>
-                <p></p>
+        <div class="shop-content">
+            <div class="product-box">
+                <img src="images/tienda/product1.jpg" alt="" class="product-img">
+                <h2 class="product-title">PRODUCTO</h2>
+                <span class="price">$500</span>
+                <i class='bx bx-shopping-bag add-cart'></i>
             </div>
-            <div class="col-4">
-                <figure>
-                    <img src="images/tienda/product6.jpg" alt="">
-                </figure>
-                <h4>León</h4>
-                <p></p>
+            <div class="product-box">
+                <img src="images/tienda/product1.jpg" alt="" class="product-img">
+                <h2 class="product-title">PRODUCTO</h2>
+                <span class="price">$500</span>
+                <i class='bx bx-shopping-bag add-cart'></i>
             </div>
-            <div class="col-4">
-                <figure>
-                    <img src="images/tienda/product7.jpg" alt="">
-                </figure>
-                <h4>Ovejas</h4>
-                <p></p>
+            <div class="product-box">
+                <img src="images/tienda/product1.jpg" alt="" class="product-img">
+                <h2 class="product-title">PRODUCTO</h2>
+                <span class="price">$500</span>
+                <i class='bx bx-shopping-bag add-cart'></i>
             </div>
-            <div class="col-4">
-                <figure>
-                    <img src="images/tienda/product8.jpg" alt="">
-                </figure>
-                <h4>Este bicho que no sé que es</h4>
-                <p></p>
+            <div class="product-box">
+                <img src="images/tienda/product1.jpg" alt="" class="product-img">
+                <h2 class="product-title">PRODUCTO</h2>
+                <span class="price">$500</span>
+                <i class='bx bx-shopping-bag add-cart'></i>
             </div>
         </div>
     </div>
 
 
 
-    <!-- FOOTER -->
+
+
+<!--  ===================================
+=========================================
+    FOOTER
+=========================================
+========================================= -->
+
+
     <div class="footer">
         <div class="container">
             <div class="row">
