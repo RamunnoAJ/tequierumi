@@ -7,7 +7,7 @@
 
     --fs-xl: clamp(3.5rem, 12vw + 1rem, 7rem);
     --fs-700: 2;
-    --fs-600: 1.5rem;
+    --fs-600: 1.25rem;
     --fs-400: .8rem;
 
     font-size: 16px;
@@ -106,6 +106,7 @@ body {
     text-transform: uppercase;
     text-decoration: none;
     text-align: right;
+    font-size: var(--fs-400);
 }
 
 .nav a:hover,
@@ -180,7 +181,7 @@ h1 {
 
 p {
     color: #555;
-    font-size: var(--fs-400);
+    font-size: var(--fs-600);
     text-align: center;
 }
 
@@ -298,6 +299,45 @@ a {
 
 /* ======================================
 =========================================
+    PRODUCTOS DESTACADOS
+=========================================
+========================================= */
+
+.title{
+    text-align: center;
+    margin-block: 2em;
+    position: relative;
+    line-height: 2.5em;
+    color: #555;
+    font-size: var(--fs-700);
+}
+
+.title::after{
+    content: '';
+    background: var(--cream);
+    width: 80px;
+    height: 5px;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.curved {
+    position: relative;
+    background: var(--white);
+    height: 20vh;
+    border-bottom-left-radius: 50% 20%;
+    border-bottom-right-radius: 50% 20%;
+}
+
+
+
+
+
+/* ======================================
+=========================================
     FOOTER
 =========================================
 ========================================= */
@@ -317,11 +357,6 @@ a {
     color: #2c2c2c;
 }
 
-.footer h3 {
-    color: var(--orange);
-    margin-bottom: .3em;
-}
-
 .footer img {
     width: 7rem;
     margin-bottom: 1em;
@@ -335,7 +370,7 @@ ul {
     list-style-type: none;
 }
 
-.footer hr {
+hr {
     border: none;
     background: var(--cream);
     height: 1.5px;
@@ -366,13 +401,17 @@ ul {
     background: var(--white);
     position: relative;
     padding: 2em;
+    border-bottom-left-radius: 10% 10%;
+    border-bottom-right-radius: 10% 10%;
 }
 
 .shop-content {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, auto));
     gap: 1.5rem;
-    margin: 1.5rem;
+    margin: auto;
+    max-width: 1500px;
+    margin-top: 2em;
 }
 
 .product-box {
@@ -429,9 +468,9 @@ ul {
 @media (min-width: 40em) {
 
     :root {
-        --fs-700: 2;
-        --fs-600: 1.5rem;
-        --fs-400: 1rem;
+        --fs-700: 2.5rem;
+        --fs-600: 1.75rem;
+        --fs-400: 1.25rem;
     }
 
     .header {
