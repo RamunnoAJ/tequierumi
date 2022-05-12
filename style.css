@@ -25,6 +25,7 @@
 body {
     margin: 0;
     width: 100%;
+    min-height: 100vh;
 }
 
 /* ======================================
@@ -328,8 +329,6 @@ a {
     position: relative;
     background: var(--white);
     height: 20vh;
-    border-bottom-left-radius: 50% 20%;
-    border-bottom-right-radius: 50% 20%;
 }
 
 
@@ -401,8 +400,8 @@ hr {
     background: var(--white);
     position: relative;
     padding: 2em;
-    border-bottom-left-radius: 10% 10%;
-    border-bottom-right-radius: 10% 10%;
+    border-bottom-left-radius: 20% 2%;
+    border-bottom-right-radius: 20% 2%;
 }
 
 .shop-content {
@@ -518,6 +517,11 @@ hr {
 
     .box-2 {
         min-height: 60vh;
+    }
+
+    .small-container{
+        border-bottom-left-radius: 10% 10%;
+        border-bottom-right-radius: 10% 10%;
     }
 
     .carousel-button {
