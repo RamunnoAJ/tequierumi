@@ -17,9 +17,6 @@
     <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
     <link href="images/logo.png" rel="shortcut icon" type="x-icon">
 
-
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 <body>
 
@@ -36,17 +33,19 @@
                     <a href="index.html"><img src="images/logo.png" alt=""></a>
                 </div>
                 <nav class="nav">
-                    <ul id="menuItems" class="navList">
-                        <li><a href="index.html">Inicio</a></li>
-                        <li><a href="tienda.html">Tienda</a></li>
-                        <li><a href="contacto.html">Contacto</a></li>
-                        <li><a href="about-us.html">Quienes Somos</a></li>
+                    <ul class="nav-menu">
+                        <li class="nav-item"><a href="index.html">Inicio</a></li>
+                        <li class="nav-item"><a href="tienda.html">Tienda</a></li>
+                        <li class="nav-item"><a href="contacto.html">Contacto</a></li>
+                        <li class="nav-item"><a href="about-us.html">Quienes Somos</a></li>
                         <!-- <li><a href=""><i class="fa-solid fa-circle-user site-nav--icon"></i></a></li>
                         <li><a href=""><i class="fa-solid fa-cart-shopping site-nav--icon"></i></a></li> -->
                     </ul>
                 </nav>
-                <div class="menu-toggle">
-                    <div class="hamburguer"></div>
+                <div class="hamburguer">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
                 </div>
             </div>
         </div> 
@@ -109,5 +108,7 @@
             <p class="copyright">Copyright 2022 - Tequierumi, todos los derechos reservados.</p>
         </div>
     </div>
+
+    <script src="script.js"></script>
 </body>
 </html>

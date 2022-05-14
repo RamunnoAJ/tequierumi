@@ -7,7 +7,7 @@
 
     --fs-xl: clamp(3.5rem, 12vw + 1rem, 7rem);
     --fs-700: 2;
-    --fs-600: 1.25rem;
+    --fs-600: 1rem;
     --fs-400: .8rem;
 
     font-size: 16px;
@@ -55,103 +55,71 @@ body {
 }
 
 .navbar {
+    min-height: 70px;
     display: flex;
-    align-items: center;
     justify-content: space-between;
+    align-items: center;
+    padding: 0 1.5em;
 }
 
-.container {
-    width: 95%;
-    max-width: 1000px;
-    margin: auto;
-}
-
-.nav {
-    position: fixed;
-    top: 100%;
-    right: 0%;
-    background: var(--white);
-    clip-path: circle(0px at top right);
-    transition: clip-path ease-in-out 700ms;
-    height: 100vh;
-    z-index: 100;
-}
-
-
-.site-nav--open {
-    clip-path: circle(250% at top right);
-  /*   display: block; */
-}
-
-.navList {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    font-weight: bold;
-    font-size: var(--fs-400);
-}
-
-.navList li {
-    border-bottom: 1px solid var(--cream);
-}
-
-.navList li:last-child {
-    border-bottom: none;
-}
-
-.nav a {
-    color: var(--orange);
-    display: block;
-    padding-block: 1.4em;
-    padding-inline: 1.4em;
-    text-transform: uppercase;
-    text-decoration: none;
-    text-align: right;
-    font-size: var(--fs-400);
-}
-
-.nav-item a {
-    transition: 0.7s ease;
-}
-
-.nav-item a:hover {
-    color: #2c2c2c;
-}
-
-.site-nav--icon {
-    display: inline-block;
-    font-size: var(--fs-600);
-    width: 1.1em;
-    text-align: right;
-    color: var(--orange);
-}
-
-.menu-toggle {
-    padding: 1em;
+.nav-menu {
+    display: flex;
     position: absolute;
-    right: .5em;
+    left: -100%;
+    top: 100px;
+    flex-direction: column;
+    background: var(--white);
+    width: 100%;
+    text-align: center;
+    gap: 0;
+    transition: 0.3s;
+    z-index: 10000;
+}
+
+.nav ul li a {
+    color: var(--orange);
+    text-decoration: none;
+    font-size: var(--fs-400);
+    font-weight: bold;
+}
+
+.nav-item {
+    margin: 1em 0;
+}
+
+.nav-menu.active {
+    left: 0;
+}
+
+.hamburguer {
+    display: block;
     cursor: pointer;
 }
 
-.hamburguer,
-.hamburguer::before,
-.hamburguer::after {
-    content: '';
+.hamburguer.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburguer.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.hamburguer.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+.bar {
     display: block;
-    background: var(--orange);
+    width: 25px;
     height: 3px;
-    width: 1.75em;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background: var(--orange);
     border-radius: 3px;
-    transition: all ease-in-out 500ms;
 }
 
-.hamburguer::before {
-    transform: translateY(-6px);
-}
 
-.hamburguer::after {
-    transform: translateY(3px);
-}
 
 
 /* ======================================
@@ -600,37 +568,37 @@ form textarea {
         padding-block: 2em;
     }
 
-    .menu-toggle {
+    .container {
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+
+    .nav-menu {
+        position: static;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        gap: 3em;
+    }
+
+    .hamburguer {
         display: none;
     }
-
-    .nav {
-        height: auto;
-        position: relative;
-        background: transparent;
-        float: right;
-        clip-path: initial;
+    
+    
+    .nav ul li a::after {
+        content: '';
+        width: 0%;
+        height: 2px;
+        background: var(--orange);
+        display: block;
+        margin: auto;
+        transition: 0.5s;
     }
-
-    .navList li {
-        display: inline-block;
-        border: none;
-        font-size: 1.1rem;
-        padding-block: .5em;
-    }
-
-    .nav a {
-        padding: 0;
-        margin-left: 3em;
-    }
-
-    .nav a:hover,
-    .nav a:focus {
-        background: transparent;
-    }
-
-    .site-nav--icon {
-        display: none;
+    
+    .nav ul li a:hover::after {
+        width: 90%;
     }
 
     .row-grid {
