@@ -17,11 +17,16 @@
     <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
     <link href="images/logo.png" rel="shortcut icon" type="x-icon">
 
-
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="script.js"></script>
 </head>
 <body>
+
+<!--  ===================================
+=========================================
+    HEADER
+=========================================
+========================================= -->
+
     <div class="header">
         <div class="container">
             <div class="navbar">
@@ -30,12 +35,11 @@
                 </div>
                 <nav class="nav">
                     <ul id="menuItems" class="navList">
-                        <li><a href="index.html">Inicio</a></li>
-                        <li><a href="tienda.html">Tienda</a></li>
-                        <li><a href="contacto.html">Contacto</a></li>
-                        <li><a href="about-us.html">Quienes Somos</a></li>
-                        <!-- <li><a href=""><i class="fa-solid fa-magnifying-glass site-nav--icon"></i></a></li>
-                        <li><a href=""><i class="fa-solid fa-circle-user site-nav--icon"></i></a></li>
+                        <li class="nav-item"><a href="index.html">Inicio</a></li>
+                        <li class="nav-item"><a href="tienda.html">Tienda</a></li>
+                        <li class="nav-item"><a href="contacto.html">Contacto</a></li>
+                        <li class="nav-item"><a href="about-us.html">Quienes Somos</a></li>
+                        <!-- <li><a href=""><i class="fa-solid fa-circle-user site-nav--icon"></i></a></li>
                         <li><a href=""><i class="fa-solid fa-cart-shopping site-nav--icon"></i></a></li> -->
                     </ul>
                 </nav>
@@ -55,7 +59,7 @@
     <h1>Tequierumi</h1>
     <div class="row-grid">
         <div class="box-1">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam adipisci quaerat unde consequuntur tempora, minima<br>natus inventore reprehenderit quis vel suscipit minus.</p>
+            <p>El mundo amigurumi es mágico. Mientras la tejedora combina puntadas, algo fantástico sucede: aparece la expresión y mirada que cada amigurumi tiene. Es esa expresión la encargada de transmitir ternura, calidez y todo el amor y esfuerzo que ha sido puesto en su creación… y esto nos llena el alma.</p>
             <a href="tienda.html" class="btn">Tienda</a>
         </div>
         <div class="box-2 carousel" data-carousel>
@@ -77,10 +81,9 @@
 ========================================= -->
 
 
-<div class="curved">
-    <h2 class="title">Productos Destacados</h2>
-</div>
+
 <div class="small-container">
+    <h2 class="title">Productos Destacados</h2>
     <div class="shop-content">
         <div class="product-box">
                 <img src="images/tienda/product1.jpg" alt="" class="product-img">
@@ -117,8 +120,7 @@
 
     <div class="footer">
         <div class="container">
-            <div class="row">
-                <div class="footer-col-3">
+                <div class="grid2">
                     <div class="logo">
                         <img src="images/logo.png" alt="">
                     </div>
@@ -127,13 +129,11 @@
                         <a href="https://www.instagram.com/tequierumi/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
                     </div>
                 </div>
-            </div>
             <hr>
             <p class="copyright">Copyright 2022 - Tequierumi, todos los derechos reservados.</p>
         </div>
     </div>
 
     <script src="carousel.js"></script>
-    <script src="script.js"></script>
 </body>
 </html>
