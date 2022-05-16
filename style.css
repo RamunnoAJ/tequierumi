@@ -11,9 +11,9 @@
     --orange: #C3753D;
 
     --fs-xl: clamp(3.5rem, 12vw + 1rem, 7rem);
-    --fs-700: 2;
-    --fs-600: 1rem;
-    --fs-400: .8rem;
+    --fs-700: 1.8rem;
+    --fs-600: 1.25rem;
+    --fs-400: 1rem;
 
     font-size: 16px;
     font-family: 'Amatic SC', cursive;
@@ -125,6 +125,117 @@ body {
     border-radius: 3px;
 }
 
+/* ======================================
+=========================================
+    CART
+=========================================
+========================================= */
+
+.cart {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 320px;
+    min-height: 100vh;
+    padding: 1.2em;
+    background: var(--white);
+    box-shadow: -2px 0 4px hsl(0 4% 15% /10%);
+    z-index: 1000000000000;
+    transition: .3s;
+}
+
+.cart.active {
+    right: 0;
+    transition: .3s ease-in-out;
+}
+
+.cart-title {
+    text-align: center;
+    font-size: var(--fs-600);
+    font-weight: bold;
+    margin-top: 2rem;
+}
+
+.cart-box {
+    display: grid;
+    grid-template-columns: 32% 50% 18%;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.cart-img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    padding: 0.8rem;
+}
+
+.detail-box {
+    display: grid;
+    row-gap: 0.5rem;
+}
+
+.cart-product-title {
+    font-size: var(--fs-400);
+}
+
+.cart-quantity {
+    border: 1px solid var(--cream);
+    outline-color: var(--orange);
+    width: 2.4rem;
+    text-align: center;
+}
+
+.total {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 1.5rem;
+    border-top: 1px solid var(--orange);
+}
+
+.total-price {
+    margin-left: 1rem;
+}
+
+.btn-buy {
+    display: flex;
+    margin: 1.5rem auto 0 auto;
+    padding: 0.8em 1.2em;
+    border: none;
+    background: var(--orange);
+    cursor: pointer;
+    font-family: 'Amatic SC', cursive;
+    color: #000;
+    font-size: var(--fs-400);
+    font-weight: bold;
+    transition: 0.5s;
+}
+
+.btn-buy:hover {
+    background: var(--cream);
+}
+
+.close-cart {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+}
+
+
+
+
+
+
+
+
+
+.fa-solid {
+    color: var(--orange);
+    margin: 0 .75em;
+    cursor: pointer;
+    font-size: var(--fs-400);
+}
 
 
 
@@ -207,7 +318,7 @@ a {
     height: 100%;
     top: 5px;
     left: 5px;
-    transition: 0.2s;
+    transition: 0.4s;
     background-color: var(--orange);
 }
 
@@ -296,6 +407,7 @@ a {
     line-height: 2.5em;
     color: #555;
     font-size: var(--fs-700);
+    font-weight: bold;
 }
 
 .title::after{
@@ -430,8 +542,8 @@ hr {
 }
 
 .price {
-    font-weight: 500;
-    font-size: var(--fs-400);
+    font-weight: bold;
+    font-size: var(--fs-600);
     color: #555;
 }
 
@@ -632,7 +744,7 @@ form textarea {
     }
     
     
-    .nav ul li a::after {
+    .nav-text::after {
         content: '';
         width: 0%;
         height: 2px;
@@ -642,7 +754,7 @@ form textarea {
         transition: 0.5s;
     }
     
-    .nav ul li a:hover::after {
+    .nav-text:hover::after {
         width: 90%;
     }
 
