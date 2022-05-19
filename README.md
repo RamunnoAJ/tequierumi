@@ -1,0 +1,2 @@
+This is a E-Commerce web page designed for my mother in law, she sells his manufactured products online. It contains an responsive and interactive interface, with buttons to contact her via phone/email and a contact form to send her an email.It also shows her social media where you can find her. I made a simple design to create a comfortable experience for the user.
+This web is developed with HTML, CSS and JavaScript.
